@@ -5,8 +5,13 @@ class Point {
 
   @override
   String toString() => 'Point($x, $y)';
+
+  @override
+  bool operator ==(covariant Point other) {
+    return x == other.x && y == other.y;
+  }
 }
 
 void main() {
-  print(Point(1, 1));
+  print(Point(1, 1) == Point(1, 1));
 }
